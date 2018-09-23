@@ -1,12 +1,12 @@
 # 1021.Couples
 
-------
+
 
 ## Constraints
 
 Time Limit: 1 secs, Memory Limit: 32 MB
 
-------
+
 
 ## Description
 
@@ -14,20 +14,20 @@ N couples are standing in a circle, numbered consecutively clockwise from 1 to 2
 
 Can we remove all the couples out of the circle?
 
-------
+
 
 ## Input
 
 There may be several test cases in the input file. In each case, the first line is an integer **N**(1 <= N <= 100000)----the number of couples. In the following N lines, each line contains two integers ---- the numbers of each couple.
 N = 0 indicates the end of the input.
 
-------
+
 
 ## Output
 
 Output "**Yes**" if we can remove all the couples out of the circle. Otherwise, output "**No**".
 
-------
+
 
 ## Sample Input
 
@@ -45,7 +45,7 @@ Output "**Yes**" if we can remove all the couples out of the circle. Otherwise, 
 0
 ```
 
-------
+
 
 ## Sample Output
 
@@ -54,7 +54,7 @@ Yes
 No
 ```
 
-------
+
 
 ## Problem Source
 
