@@ -1,6 +1,6 @@
 # 4.Median of Two Sorted Arrays
 
-------
+
 
 ## Description
 
@@ -10,7 +10,7 @@ Find the median of the two sorted arrays. The overall run time complexity should
 
 You may assume **nums1** and **nums2** cannot be both empty.
 
-------
+
 
 ## **Example 1**
 

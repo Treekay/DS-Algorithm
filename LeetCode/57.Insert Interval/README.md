@@ -1,6 +1,6 @@
 # 57.Insert Interval
 
-------
+
 
 ## Description
 
@@ -8,7 +8,7 @@ Given a set of *non-overlapping* intervals, insert a new interval into the inter
 
 You may assume that the intervals were initially sorted according to their start times.
 
-------
+
 
 ## **Example 1**
 
