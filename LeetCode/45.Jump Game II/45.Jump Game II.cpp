@@ -5,7 +5,8 @@ using namespace std;
 class Solution {
 public:
   Solution() {}
-  int jump(vector<int>& nums) {
+
+  int jump1(vector<int>& nums) {
     if (nums.size() <= 2) return nums.size() - 1;
     int cur = 0;
     vector<int> steps(nums.size(), nums[0]);
@@ -15,6 +16,7 @@ public:
       if (i >= steps[cur]) cur++;
     }
   }
+  
 };
 
 int main(void) {
