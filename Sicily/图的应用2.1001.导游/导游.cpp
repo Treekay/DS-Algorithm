@@ -1,36 +1,58 @@
-#include<cstdio>
-#include<iostream>
+#include <stdio.h>
+#include <iostream>
+#include <vector>
+#include <string>
+#include <stack>
+#include <iomanip>
+#include <algorithm>
+#include <queue>
+#include <functional>
+#include <map>
+#include <string.h>
 using namespace std;
-#define inf 9999999
-int map[250][250];
-int n, m;
-int Floyd(int x, int y) {
-  int t, i, j;
-  for (t = 0; t < n; t++)
-    for (i = 0; i < n; i++)
-      for (j = 0; j < n; j++)
-        if (map[i][j] > map[i][t] + map[t][j]) {
-          map[i][j] = map[i][t] + map[t][j];
+
+const int MAX_N = 105;
+const int INF = -1;
+
+int G[MAX_N][MAX_N];
+int N, R, S, E, P;
+
+void init() {
+    for (int i = 1; i <= N; i++) {
+        for (int j = 1; j <= N; j++) {
+            G[i][j] = INF;
         }
-  if (map[x][y] == inf)
-    return -1;
-  else
-    return map[x][y];
-}
-int main() {
-  while (scanf("%d%d", &n, &m) != EOF) {
-    int start, end, weight, qStart, qEnd;
-    for (int i = 0; i <= n; i++)
-      for (int j = 0; j <= n; j++)
-        map[i][j] = map[j][i] = inf;
-    for (int i = 0; i < n; i++)
-      map[i][i] = 0;
-    for (int i = 0; i < m; i++) {
-      scanf("%d%d%d", &start, &end, &weight);
-      if (map[start][end] > weight)
-        map[start][end] = map[end][start] = weight;
+        G[i][i] = 0;
     }
-    scanf("%d%d", &qStart, &qEnd);
-    printf("%d\n", Floyd(qStart, qEnd));
-  }
+}
+
+int main() {
+
+    std::ios::sync_with_stdio(false);
+
+    int caseNum;
+    cin >> caseNum;
+
+    while (caseNum--) {
+        cin >> N >> R;
+        init();
+        for (int i = 0; i < R; i++) {
+            int v1, v2, dis;
+            cin >> v1 >> v2 >> dis;
+            G[v1][v2] = G[v2][v1] = dis;
+        }
+        cin >> S >> E >> P;
+        for (int k = 1; k <= N; k++) {
+            for (int i = 1; i <= N; i++) {
+                for (int j = 1; j <= N; j++) {
+                    G[i][j] = max(G[i][j], min(G[i][k], G[k][j]));
+                }
+            }
+        }
+        cout << P / (G[S][E]- 1) + (P % G[S][E] ? 1 : 0) << endl;
+    }
+
+    //cin >> N;
+
+    return 0;
 }
