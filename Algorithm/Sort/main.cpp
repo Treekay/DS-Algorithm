@@ -1,6 +1,7 @@
 #include <iostream>
 
 #include "MergeSort.hpp"
+#include "QuickSort.hpp"
 
 using std::cin;
 using std::cout;
@@ -26,7 +27,8 @@ int main(void) {
     cout << endl;
 
     // 排序
-    MergeSort(data, 0, len-1);
+    // MergeSort(data, 0, len-1);
+    QuickSort(data, 0, len - 1);
 
     // 排序后的顺序
     cout << "after sorted: ";
