@@ -2,6 +2,8 @@
 
 #include "MergeSort.hpp"
 #include "QuickSort.hpp"
+#include "SelectSort.hpp"
+#include "BubbleSort.hpp"
 
 using std::cin;
 using std::cout;
@@ -28,7 +30,10 @@ int main(void) {
 
     // 排序
     // MergeSort(data, 0, len-1);
-    QuickSort(data, 0, len - 1);
+    // QuickSort(data, 0, len - 1);
+    // SelectSort(data, len);
+    // BubbleSort(data, len);
+
 
     // 排序后的顺序
     cout << "after sorted: ";
