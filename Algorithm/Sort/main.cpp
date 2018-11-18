@@ -4,6 +4,8 @@
 #include "QuickSort.hpp"
 #include "SelectSort.hpp"
 #include "BubbleSort.hpp"
+#include "InsertSort.hpp"
+#include "HeapSort.hpp"
 
 using std::cin;
 using std::cout;
@@ -33,7 +35,8 @@ int main(void) {
     // QuickSort(data, 0, len - 1);
     // SelectSort(data, len);
     // BubbleSort(data, len);
-
+    // InsertSort(data, len);
+    HeapSort();
 
     // 排序后的顺序
     cout << "after sorted: ";

@@ -3,11 +3,11 @@
 
 void BubbleSort(int *data, int num) {
     for (int i = 0; i < num; i++) {
-        for (int j = i; j < num; j++) {
-            if (data[i] > data[j]) {
-                int temp = data[i];
-                data[i] = data[j];
-                data[j] = temp;
+        for (int j = 0; j < num - i - 1; j++) {
+            if (data[j] > data[j + 1]) {
+                int temp = data[j];
+                data[j] = data[j + 1];
+                data[j + 1] = temp;
             }
         }
     }
